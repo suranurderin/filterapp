@@ -1,0 +1,143 @@
+/* Genel Stil */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: khaki;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  /* Başlık */
+  h1 {
+    font-size: 65px;
+    margin-top: 0.5cm;
+    margin-bottom: 20px;          
+    color: #b2560d;
+    text-shadow: 3px 3px 10px #ffbf34;  /*Gölge efekti*/
+  }
+  
+  /* Dosya Yükleme Butonu */
+  input[type="file"] {
+    display: block;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid khaki;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: khaki;
+    cursor: pointer;
+  }
+
+  /* Filtre Kutuları */
+  .controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+  }
+  .filter-btn {
+    background-color: navajowhite;
+    color: orangered;
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  .filter-btn.active {
+    background-color: orange;
+  }
+  .filter-btn:hover {
+    background-color: orangered;
+    color: navajowhite;
+  }
+
+  /* Canvas (Resim Alanı) */
+  canvas {
+    display: block;
+    margin: 20px auto; /* Ortala */
+    width: 250px; /* Genişlik */
+    height: 250px; /* Yükseklik */
+    border: 3px solid #d76800; /* Kenarlık */
+    border-radius: 5px; /* Yuvarlatılmış köşeler */
+    background: linear-gradient(135deg, #f0f0f0, #cfcfcf); /* Arka plan gradyanı */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+  }
+
+  /*Tüm Filtreleri Sıfırla*/
+  #reset-btn {
+    background-color: #d76800;
+    margin-top: 15px;
+    height: 30px;
+  }
+
+  /*Kaydet butonu*/
+  #download-btn {
+    background-color: orangered;
+    color: white; 
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+    border-radius: 5px; /* Butona yuvarlak köşeler eklemek */
+    transition: background-color 0.3s; /* Arka plan renginin geçiş süresi */
+  }
+  
+  #download-btn:hover {
+    background-color: white; /* Hover (üzerine gelindiğinde) arka plan rengi */
+    color: orangered;
+  }
+  
+  #download-btn i {
+    margin-right: 5px;
+  }
+  
+/*Filtre yoğunluğu*/
+.slider-container {
+  display: flex;
+  align-items: center; /* Dikeyde ortalama */
+  justify-content: center; /* Yatayda ortalama */
+  margin-top: 10px;
+}
+
+.slider-container label {
+  margin-right: 10px; /* "Filtre Yoğunluğu" ile kaydırıcı arasında boşluk */
+  font-size: 16px; /* Yazı boyutu */
+  color: #333; /* Yazı rengi */
+}
+
+/*Kaydırıcı*/
+/* Kaydırıcı Track (İz) Stilini Turuncuya Ayarlama */
+input[type="range"] {
+  appearance: none; /* Standard property */
+  -webkit-appearance: none; /* Safari and Chrome */
+  -moz-appearance: none; /* Firefox */
+  width: 20%;
+  height: 8px;
+  background: linear-gradient(90deg, orange 50%, #ccc 50%); /* Dinamik turuncu renk */
+  border-radius: 5px;
+  outline: none;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+/* Kaydırıcı Thumb (Tutamak) Turuncu Stil */
+input[type="range"] {
+  appearance: none; /* Standard property */
+  -webkit-appearance: none; /* Safari and Chrome */
+  width: 25%;
+  height: 8px;
+  background: linear-gradient(90deg, orange 50%, #ccc 50%); /* Başlangıçta %50 turuncu */
+  border-radius: 5px;
+  outline: none;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+/* Kaydırıcı Hover Efekti */
+input[type="range"]:hover {
+  background: linear-gradient(90deg, darkorange 50%, #ccc 50%); /* Hover için daha koyu turuncu */
+}

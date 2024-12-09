@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resim Filtresi Uygulaması</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <h1>Resim Filtresi Uygulaması</h1>
+  <input type="file" id="upload" accept="image/*">
+  <div class="controls">
+    <button class="filter-btn" data-filter="grayscale">Siyah-Beyaz</button>
+    <button class="filter-btn" data-filter="sepia">Sepya</button>
+    <button class="filter-btn" data-filter="brightness">Parlaklık</button>
+    <button class="filter-btn" data-filter="blur">Bulanık</button>
+    <button class="filter-btn" data-filter="invert">Negatif</button>
+    <button class="filter-btn" data-filter="contrast">Kontrast</button>
+    <button class="filter-btn" data-filter="hue-rotate">Renk Döndürme</button>
+    <button class="filter-btn" data-filter="saturation">Saturasyon</button>
+    <button class="filter-btn" data-filter="red">Kırmızı</button>
+    <button class="filter-btn" data-filter="green">Yeşil</button>
+    <button class="filter-btn" data-filter="blue">Mavi</button>
+    <button class="filter-btn" data-filter="lightness">Işık Karartma</button>
+    <button class="filter-btn" data-filter="edge-soften">Kenar Yumuşatma</button>
+    <button class="filter-btn" data-filter="vignette">Kenarlarda Karanlıklaştırma</button>
+  
+  </div>
+  <button id="reset-btn">Tüm Filtreleri Sıfırla</button>
+
+  <div class="slider-container" id="slider-container">
+    <label for="filter-slider">Filtre Yoğunluğu:</label>
+    <input type="range" id="filter-slider" class="slider" min="0" max="2" step="0.01" value="1">
+    <span id="filter-percentage">50%</span>
+  </div>
+  
+
+  <canvas id="canvas"></canvas>
+  <button id="download-btn">
+    <i class="fas fa-download"></i> Kaydet
+  </button>
+
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+</body>
+</html>
+
+
+
+
+
